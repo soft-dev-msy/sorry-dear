@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no">
+  <title>A Letter of Redemption</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="stage">
+    <div id="scene-1" class="scene active">
+      <div class="flicker-cursor" onclick="startExperience()">|</div>
+      <p style="color: #333; font-size: 0.7rem; margin-top: 15px;">(tap the cursor)</p>
+    </div>
+
+    <div id="scene-2" class="scene">
+      <div class="message-container shaky" id="typewriter-text"></div>
+      <button style="display: none; cursor: pointer;" id="rewind-trigger" class="rewind-btn" onclick="triggerRewind()">rewind & rewrite</button>
+    </div>
+
+    <div id="scene-3" class="scene">
+      <pre id="heart-display"></pre>
+      <div id="final-ask" style="opacity: 0; transition: 3s;">
+        <p style="font-size: 0.9rem; color: #888;">It's not perfect. I'm not perfect.</p>
+        <p style="color: var(--accent); font-size: 1.4rem; letter-spacing: 2px;">CAN WE START AGAIN?</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="secret-note-trigger" onclick="openNote()">📩</div>
+
+  <div id="overlay-note" onclick="closeNote()">
+    <div class="note-content" id="thatMessage">
+      "To the one who holds my heart:<br><br>
+      I'm sorry for being a glitch in our story. I spent so much time worrying about the right thing to say that I ended up saying nothing at all. <br><br>
+      I've misssed you. Let's fix the code together."
+      <br><br>
+      <span style="font-size: 0.7rem; color: var(--accent); font-style: normal;">(tap anywhere to close)</span>
+    </div>
+  </div>
+
+  <div class="footer-eggs">
+    Command Day Secondary School, Biu &#183; [GIDADO]
+  </div>
+
+  <script src="main.js"></script>
+  
+</body>
+</html>
